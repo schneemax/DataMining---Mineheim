@@ -4,6 +4,6 @@ Repository for Data Mining 1 Uni Mannheim Case Study
 
 Meetings via Googel Meet: https://meet.google.com/edk-ijrj-vgt
 
-Word Document (Proposal): https://sap-my.sharepoint.com/:w:/p/anna-lena_blinken/EctEP6LabYFBsnkIfLi2F9ABkEjk7JoPPoQTOIEzDghPmA?e=PflKxC
+Google Document (Proposal): https://docs.google.com/document/d/101T4urMxEC5_iwJ0tp05Ov2oS_7oH_VJgDFgNM8O9Ao/edit?usp=sharing
 
 Next Meeting: Saturday, 23.10.2021, 12:00
