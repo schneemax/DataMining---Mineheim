@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.15)  23 OCT 2021 14:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.10) (preloaded format=pdflatex 2021.10.23)  23 OCT 2021 18:59
 entering extended mode
 **c:/Users/d073496/Documents/GitHub/DataMining---Mineheim/LaTeX/thesis.tex
 (c:/Users/d073496/Documents/GitHub/DataMining---Mineheim/LaTeX/thesis.tex
 LaTeX2e <2021-06-01> patch level 1
-L3 programming layer <2021-10-12> (C:\Users\d073496\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\book.cls
+L3 programming layer <2021-10-18> (C:\Users\d073496\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\book.cls
 Document Class: book 2021/02/12 v1.4n Standard LaTeX document class
 (C:\Users\d073496\AppData\Local\Programs\MiKTeX 2.9\tex/latex/base\bk11.clo
 File: bk11.clo 2021/02/12 v1.4n Standard LaTeX file (size option)
@@ -184,9 +184,9 @@ Package: algorithmic 2009/08/24 v0.1 Document Style `algorithmic'
 \ALC@tlm=\skip62
 \algorithmicindent=\skip63
 ) (C:\Users\d073496\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lipsum\lipsum.sty (C:\Users\d073496\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3packages/l3keys2e\l3keys2e.sty (C:\Users\d073496\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3kernel\expl3.sty
-Package: expl3 2021-10-12 L3 programming layer (loader) 
+Package: expl3 2021-10-18 L3 programming layer (loader) 
  (C:\Users\d073496\AppData\Local\Programs\MiKTeX 2.9\tex/latex/l3backend\l3backend-pdftex.def
-File: l3backend-pdftex.def 2021-10-12 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2021-10-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count276
 \l__pdf_internal_box=\box56
 ))
@@ -199,26 +199,26 @@ Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
  (C:\Users\d073496\AppData\Local\Programs\MiKTeX 2.9\tex/latex/lipsum\lipsum.ltd.tex))
 \c@definition=\count280
 \c@proposition=\count281
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 68.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 65.
  (C:\Users\d073496\AppData\Local\Programs\MiKTeX 2.9\tex/latex/psnfss\ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 ) (c:\Users\d073496\Documents\GitHub\DataMining---Mineheim\LaTeX\build\thesis.aux)
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 68.
-LaTeX Font Info:    ... okay on input line 68.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 65.
+LaTeX Font Info:    ... okay on input line 65.
  (C:\Users\d073496\AppData\Local\Programs\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count282
@@ -250,11 +250,7 @@ File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 Chapter 1.
 [1
 
-]
-
-LaTeX Warning: Citation `mochol08matcher' on page 2 undefined on input line 116.
-
-[2]
+] [2]
 Chapter 2.
 [3
 
@@ -268,29 +264,27 @@ Chapter 4.
 
 ]
 Chapter 5.
-No file thesis.bbl.
+(c:\Users\d073496\Documents\GitHub\DataMining---Mineheim\LaTeX\build\thesis.bbl [6
+
+])
 \tf@thm=\write4
 \openout4 = `thesis.thm'.
 
-[6
+ [7
 
-] (c:\Users\d073496\Documents\GitHub\DataMining---Mineheim\LaTeX\build\thesis.aux)
-
-LaTeX Warning: There were undefined references.
-
- ) 
+] (c:\Users\d073496\Documents\GitHub\DataMining---Mineheim\LaTeX\build\thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 3509 strings out of 478893
- 53794 string characters out of 2848032
- 435319 words of memory out of 3000000
- 21346 multiletter control sequences out of 15000+600000
- 414434 words of font info for 42 fonts, out of 8000000 for 9000
+ 3518 strings out of 478873
+ 54104 string characters out of 2847389
+ 436982 words of memory out of 3000000
+ 21371 multiletter control sequences out of 15000+600000
+ 416118 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  70i,5n,81p,284b,153s stack positions out of 5000i,500n,10000p,200000b,80000s
-{C:/Users/d073496/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/d073496/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/d073496/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/d073496/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb>
-Output written on thesis.pdf (8 pages, 51537 bytes).
+{C:/Users/d073496/AppData/Local/Programs/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Users/d073496/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Users/d073496/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/d073496/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Users/d073496/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on thesis.pdf (9 pages, 64099 bytes).
 PDF statistics:
- 45 PDF objects out of 1000 (max. 8388607)
+ 53 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
