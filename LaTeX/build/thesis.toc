@@ -1,5 +1,0 @@
-\contentsline {chapter}{\numberline {1}What is the problem you are solving?}{1}{}%
-\contentsline {chapter}{\numberline {2}What datawill you use?}{3}{}%
-\contentsline {chapter}{\numberline {3}How will you solve the problem?}{4}{}%
-\contentsline {chapter}{\numberline {4}How will you measure success?}{5}{}%
-\contentsline {chapter}{\numberline {5}What do you expect your results to look like?}{6}{}%
