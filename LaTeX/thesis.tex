@@ -32,6 +32,10 @@
 %Packages Nicolas Fürhaupter
 \usepackage{color}
 
+%Packages Erik Penther
+\usepackage{hyperref}
+\hypersetup{hidelinks}
+
 % well, when your work is concerned with definitions, proposition and so on, we suggest this
 % feel free to add Corrolary, Theorem or whatever you need
 \newtheorem{definition}{Definition}
@@ -100,8 +104,8 @@
 \end{titlepage} 
 
 % no lets make some add some table of contents
-\tableofcontents
-\newpage
+%\tableofcontents
+%\newpage
 
 %\listofalgorithms
 
@@ -128,6 +132,10 @@ With the help of our dataset and various data mining methods, we want to objecti
 First of all, the prediction of wine quality based on its components is highly-valuable for wineries and large wine dealers. By following our approach, wineries and dealers can objectively determine the quality of their products which could lead to a higher market success. Moreover, our case study facilitates the valuing of (old) wine without actually drinking it. In general, you would use experienced wine sommeliers to determine the quality of wine, but those are rare, require long training and increase the costs for product development. It is also worth mentioning that due food regulations, wine ingredients are measured anyways. By predicting the wine quality with data mining algorithms, it’s possible to shorten the taste-testing procedure of experienced sommeliers and to save important financial resources. Our solution enables possible customers to recommend their wine to consumers and solves the weak spot that the whole wine industry heavily relies on the subjective taste of a few wine sommeliers.
 
 \section{What data will you use?}
+To solve the problem outlined above we will use a publicly available data set on wine quality from \textit{data.world} [\url{https://data.world/uci/wine-quality}]. The data set is related to red and white variants of the Portuguese wine “Vinho Verde”, a unique wine product from the northwest region of Portugal. The data was originally collected by an inter-professional organization called CVRVV between 2004 and 2007 for marketing and quality assurance purposes. Now, since the data is already gathered there are no additionally steps necessary from our side. 
+
+Taking a closer look at the data set we can identify 13 features, twelve input variables and one output variable respectively. The input variables mainly represent the test results of physiochemical properties of each specific wine, e.g. pH-value, alcohol concentration, sulfates etc. These properties are measured in their respective measurement unit. Each wine is also classified by its type (red or white). The quality of the wine is represented by a score metric ranging from 0 to 10, with 0 meaning very bad and 10 meaning excellent. Each wine sample was evaluated with a sensory test (blind test) by at least three assessors and then graded. The final grade was calculated with the median of these tests. According to the data set description the classes are ordered but unbalanced.
+
 
 \section{How will you solve the problem?}\unsure{Müssen wir das kürzen?}
 \subsection{What preprocessing steps will be required?}
@@ -167,6 +175,9 @@ for classifying between good and bad wines to exclude them from the model. In ad
 \textbf{hyperparameter tuning} for the different algorithms to optimize the models.
 
 \section{How will you measure success?}
+As part of the evaluation the success will be measured with different suitable metrics. A classification model reveals data about correct and incorrect predictions which is summarized in a confusion matrix. This confusion matrix displays the differences between the predicted and true values of a specific use case within the visual representation of a matrix. Based on this matrix different evaluation metrics can be calculated. For the before described use case, the following evaluation metrics were chosen:
+First of all, it is intended to calculate the \textbf{recall} of the model which calculates the ratio between the true positive and the total number of data sets. Secondly, the \textbf{precision} is chosen as a second evaluation metric. The precision defines the difference between the true positives and the number of the truly predicted values. Thirdly, these two evaluation metrics precision and recall are combined within the \textbf{$F_1-Score$} which mathematically represents the harmonic mean of the precision and recall. In addition, the \textbf{accuracy} as well as the \textbf{cross entropy} of the model will be considered. Lastly, the \textbf{importance} of each individual input parameter will be evaluated for each model. Each model is based on a specific machine learning algorithm. The outcome of the measurement of the importance might influence the improvement of the model.
+
 
 \section{What do you expect your results to look like?}
 We generally expect that there is a correlation between the make up of different wines and their taste (quality). Without analyzig the particular data set we found different sources that link for example the ph-value of wine to whether it is sour or mild. Furthermore attributes like alcohol percentage or sugar effect the sweetness of wine. Even though taste and quality might be subjective, for example sweeter wine might be generally more liked by a broader audience than bitter wine. That's why we expect to being able to predict the quality of different wines. Nonetheless the precision of our model could be rather poor, just because of the fact that quality and taste are subjective. On the other hand the quality of wine must be influenced by its ingredients, because of that our results might be more precise than we initially expect.
