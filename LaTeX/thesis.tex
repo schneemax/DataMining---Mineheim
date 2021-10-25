@@ -125,30 +125,24 @@
 
 \chapter{What data will you use?}
 
-\chapter{How will you solve the problem?}
+\chapter{How will you solve the problem?}\unsure{Müssen wir das kürzen?}
 \section{What preprocessing steps will be required?}
 To prepare the data we received in the dataset to be useful for our different algorithms a couple of preprocessing
 steps will be required. This includes the following:
 
 \textbf{Under-/oversampling -- data balancing} In a first glance at the data we have noticed that the class distribution is
-unbalanced (there are more normal wines than great or bad ones). For that reason we have to decide what to do about 
-it -- how many classes we want to predict (e.g. binary classification or three classes: bad, normal and good), and how we want to distribute the samples
-among the classes so that it is balanced (e.g. via under- or oversampling).
+unbalanced (there are more normal wines than great or bad ones). For that reason we have to decide what to do about it -- how many classes we want to predict (e.g. binary classification or three classes: bad, normal and good), and how we want to distribute the samples among the classes so that it is balanced (e.g. via under- or oversampling).
 
-\textbf{Data analysis and inspection} The next step would be to have a look at the data whether there are duplicates, null values
-or outliers in the data. Additionally, we can analyse whether there is any correlation between different features in the dataset. 
-Furthermore, we could have a look into if we want to indroduce additional features to improve the classifier.
+\textbf{Data analysis and inspection} The next step would be to have a look at the data whether there are duplicates, null values or outliers in the data. Additionally, we can analyse whether there is any correlation between different features in the dataset. Furthermore, we could have a look into if we want to indroduce additional features to improve the classifier.
 
-\textbf{Feature standardization of numerical values (normilaztion)} In order to have good results when building the classifiers
-we have to bring each numerical features into the same scale so one feature doesn't have a bigger impact on the outcome than
-others. For that reason we have do standardize or normalize the numerical features.
+\textbf{Feature standardization of numerical values (normilaztion)} In order to have good results when building the classifiers we have to bring each numerical features into the same scale so one feature doesn't have a bigger impact on the outcome than others. For that reason we have do standardize or normalize the numerical features.
 
 \section{Which algorithms do you plan to use?}
 We plan on using six to seven different classifiers to solve the problem. Since we 
 are trying to solve a classification task, the algorithms we plan on using are classification
 algorithms.
 
-Firstly, we are planning on using \textbf{k-nearest neighbors (k-NN)} as a baseline\unsure{???} \textcolor{red}{\textbf{???}}
+Firstly, we are planning on using \textbf{k-nearest neighbors (k-NN)} as a baseline\unsure{Passt das mit der Baseline?}
 algorithm for our classification problem as k-NN is quite a simple algorithm.
 
 Additionally, we want to use \textbf{decision trees} to try build a model to classify the
