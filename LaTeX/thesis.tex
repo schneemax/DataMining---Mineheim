@@ -1,7 +1,7 @@
 % do not change these two lines (this is a hard requirement
 % there is one exception: you might replace oneside by twoside in case you deliver 
 % the printed version in the accordant format
-\documentclass[11pt,titlepage,oneside,openany]{book}
+\documentclass[11pt,titlepage,oneside,openany]{article}
 \usepackage{times}
 
 
@@ -119,14 +119,12 @@
 % okay, start new numbering ... here is where it really starts
 \pagenumbering{arabic}
 
-\chapter{What is the problem you are solving?}
-\lipsum \cite{mochol08matcher}
-%\label{cha:intro}
+\section{What is the problem you are solving?}
 
-\chapter{What data will you use?}
+\section{What data will you use?}
 
-\chapter{How will you solve the problem?}\unsure{Müssen wir das kürzen?}
-\section{What preprocessing steps will be required?}
+\section{How will you solve the problem?}\unsure{Müssen wir das kürzen?}
+\subsection{What preprocessing steps will be required?}
 To prepare the data we received in the dataset to be useful for our different algorithms a couple of preprocessing
 steps will be required. This includes the following:
 
@@ -137,7 +135,7 @@ unbalanced (there are more normal wines than great or bad ones). For that reason
 
 \textbf{Feature standardization of numerical values (normilaztion)} In order to have good results when building the classifiers we have to bring each numerical features into the same scale so one feature doesn't have a bigger impact on the outcome than others. For that reason we have do standardize or normalize the numerical features.
 
-\section{Which algorithms do you plan to use?}
+\subsection{Which algorithms do you plan to use?}
 We plan on using six to seven different classifiers to solve the problem. Since we 
 are trying to solve a classification task, the algorithms we plan on using are classification
 algorithms.
@@ -162,14 +160,14 @@ Generally we want to use \textbf{feature selection} test for each algorithm if t
 for classifying between good and bad wines to exclude them from the model. In addition to that we want to use 
 \textbf{hyperparameter tuning} for the different algorithms to optimize the models.
 
-\chapter{How will you measure success?}
+\section{How will you measure success?}
 
-\chapter{What do you expect your results to look like?}
+\section{What do you expect your results to look like?}
+We generally expect that there is a correlation between the make up of different wines and their taste (quality). Without analyzig the particular data set we found different sources that link for example the ph-value of wine to wether it is sour or mild. Furthermore attributes like alcohol percentage or sugar effect the sweetness of wine. Even though taste and quality might be subjective, for example sweeter wine might be generally more liked by a broader audience then bitter wine. That's why we expect to being able to predict the quality of different wines. Nonetheless the precision of our model could be rather poor, just because of the fact that quality and taste are subjective. On the other hand the quality of wine must be influenced by its ingredients, because of that our results might be more precise then we initially expect.
 
-
-
-\bibliographystyle{plain}
-\bibliography{thesis-ref.bib}
+%%% Un-Comment to use the bibliography
+%\bibliographystyle{plain}
+%\bibliography{thesis-ref.bib}
 
 
 %\appendix
