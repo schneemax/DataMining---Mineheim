@@ -22,6 +22,9 @@
 %Packages Max Darmstadt
 \usepackage{lipsum}
 
+%Packages Nicolas Fürhaupter
+\usepackage{color}
+
 % well, when your work is concerned with definitions, proposition and so on, we suggest this
 % feel free to add Corrolary, Theorem or whatever you need
 \newtheorem{definition}{Definition}
@@ -113,9 +116,50 @@
 \lipsum \cite{mochol08matcher}
 %\label{cha:intro}
 
-\chapter{What datawill you use?}
+\chapter{What data will you use?}
 
 \chapter{How will you solve the problem?}
+\section{What preprocessing steps will be required?}
+To prepare the data we received in the dataset to be useful for our different algorithms a couple of preprocessing
+steps will be required. This includes the following:
+
+\textbf{Under-/oversampling -- data balancing} In a first glance at the data we have noticed that the class distribution is
+unbalanced (there are more normal wines than great or bad ones). For that reason we have to decide what to do about 
+it -- how many classes we want to predict (e.g. binary classification or three classes: bad, normal and good), and how we want to distribute the samples
+among the classes so that it is balanced (e.g. via under- or oversampling).
+
+\textbf{Data analysis and inspection} The next step would be to have a look at the data whether there are duplicates, null values
+or outliers in the data. Additionally, we can analyse whether there is any correlation between different features in the dataset. 
+Furthermore, we could have a look into if we want to indroduce additional features to improve the classifier.
+
+\textbf{Feature standardization of numerical values (normilaztion)} In order to have good results when building the classifiers
+we have to bring each numerical features into the same scale so one feature doesn't have a bigger impact on the outcome than
+others. For that reason we have do standardize or normalize the numerical features.
+
+\section{Which algorithms do you plan to use?}
+We plan on using six to seven different classifiers to solve the problem. Since we 
+are trying to solve a classification task, the algorithms we plan on using are classification
+algorithms.
+
+Firstly, we are planning on using \textbf{k-nearest neighbors (k-NN)} as a baseline \textcolor{red}{\textbf{???}}
+algorithm for our classification problem as k-NN is quite a simple algorithm.
+
+Additionally, we want to use \textbf{decision trees} to try build a model to classify the
+data. As an extension of decision trees we are also interested in using a \textbf{random forest}
+to derive a classifier.
+
+Furthermore, other classification algorithms that we want to use include a \textbf{Support Vector Machine (SVM)}
+or \textbf{logistic regression} -- although logistic regression could only be used if we decide on
+a binary classification problem (i.e. deciding between wines of good and bad quality).
+
+Moreover, we want to build a \textbf{neural network} that can predict if a given wine is of good or bad quality.
+
+Finally, we are interested in using \textbf{outlier detection / anomaly detection algorithms} to detect the few 
+excellent or poor wines that are given in the dataset.
+
+Generally we want to use \textbf{feature selection} test for each algorithm if there are any features which are not relevent 
+for classifying between good and bad wines to exclude them from the model. In addition to that we want to use 
+\textbf{hyperparameter tuning} for the different algorithms to optimize the models.
 
 \chapter{How will you measure success?}
 

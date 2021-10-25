@@ -29,3 +29,5 @@
 /build
 *.pdf
 *.log
+*.thm
+__latexindent_temp.tex
