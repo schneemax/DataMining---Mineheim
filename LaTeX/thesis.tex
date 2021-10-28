@@ -126,53 +126,49 @@
 
 \section{What is the problem you are solving?}
 
-This document represents the case study proposal for Team MINEheim (Group 1). After extensive research in different topic areas and comparing multiple datasets that might be relevant for such a student project, we decided that we’d like to focus on the wine industry. This is also due to the fact that every group member is interested in research questions regarding the mentioned industry and we definitely see a lot of potential for different data mining techniques to analyze our dataset.
+This document represents the case study proposal for Team MINEheim (Group 1). After extensive research in different topic areas and comparing multiple data sets that might be relevant for such a student project, we decided that we would like to focus on the wine industry. In addition, every group member is interested in research questions regarding the mentioned industry and we definitely see a lot of potential for different data mining techniques to analyze our data set.
 
-With the help of our dataset and various data mining methods, we want to objectively classify wine based on its distinct attributes. To go into more detail, we want to predict the quality of wine based on its components and features. The target variable is the wine quality. Our approach solves the following problem and leads to a valuable business case for target groups:
+With the help of our data set and various data mining methods we want to objectively classify wine based on its distinct attributes. To go into more detail, we want to predict the quality of wine based on its components and features. The target variable is the wine quality. Our approach solves the following problem and leads to a valuable business case for target groups:
 
-First of all, the prediction of wine quality based on its components is highly-valuable for wineries and large wine dealers. By following our approach, wineries and dealers can objectively determine the quality of their products which could lead to a higher market success. Moreover, our case study facilitates the valuing of (old) wine without actually drinking it. In general, you would use experienced wine sommeliers to determine the quality of wine, but those are rare, require long training and increase the costs for product development. It is also worth mentioning that due food regulations, wine ingredients are measured anyways. By predicting the wine quality with data mining algorithms, it’s possible to shorten the taste-testing procedure of experienced sommeliers and to save important financial resources. Our solution enables possible customers to recommend their wine to consumers and solves the weak spot that the whole wine industry heavily relies on the subjective taste of a few wine sommeliers.
+First of all, the prediction of wine quality based on its components is highly-valuable for wineries and large wine dealers. By following our approach, wineries and dealers can objectively determine the quality of their products which might lead to a higher market success. Moreover, our case study facilitates the valuing of wine without actually drinking it. In general, you would use experienced wine sommeliers to determine the quality of wine, but those are rare, require long training and increase the costs for product development. It is also worth mentioning that due to food regulations, wine ingredients are measured anyways. By predicting the wine quality with data mining algorithms, it’s possible to shorten the taste-testing procedure of experienced sommeliers and to save important financial resources. Our solution enables possible customers to recommend their wine to consumers and solves the weak spot that the whole wine industry heavily relies on the subjective taste of a few wine sommeliers.
 
 \section{What data will you use?}
-To solve the problem outlined above we will use a publicly available data set on wine quality from \textit{data.world} [\url{https://data.world/uci/wine-quality}]. The data set is related to red and white variants of the Portuguese wine “Vinho Verde”, a unique wine product from the northwest region of Portugal. The data was originally collected by an inter-professional organization called CVRVV between 2004 and 2007 for marketing and quality assurance purposes. Now, since the data is already gathered there are no additionally steps necessary from our side. 
+To solve the problem outlined above a publicly available data set on wine quality from \textit{data.world} [\url{https://data.world/uci/wine-quality}] will be used. The data set is related to red and white variants of the Portuguese wine “Vinho Verde”, a unique wine product from the northwest region of Portugal. The data was originally collected by an inter-professional organization called CVRVV between 2004 and 2007 for marketing and quality assurance purposes. Since the data is already gathered there are no additional steps necessary. 
 
-Taking a closer look at the data set we can identify 13 features, twelve input variables and one output variable respectively. The input variables mainly represent the test results of physiochemical properties of each specific wine, e.g. pH-value, alcohol concentration, sulfates etc. These properties are measured in their respective measurement unit. Each wine is also classified by its type (red or white). The quality of the wine is represented by a score metric ranging from 0 to 10, with 0 meaning very bad and 10 meaning excellent. Each wine sample was evaluated with a sensory test (blind test) by at least three assessors and then graded. The final grade was calculated with the median of these tests. According to the data set description the classes are ordered but unbalanced.
+Taking a closer look at the data set we can identify 13 features, twelve input variables and one output variable respectively. The input variables mainly represent the test results of physiochemical properties of each specific wine, e.g., pH-value, alcohol concentration, sulfates etc. These properties are measured in their respective measurement unit. Each wine is also classified by its type (red or white). The quality of the wine is represented by a score metric ranging from 0 to 10, with 0 meaning very bad and 10 referring to excellent. Each wine sample was evaluated with a sensory test (blind test) by at least three assessors and then graded. The final grade was calculated with the median of these tests. According to the data set description the classes are ordered but unbalanced.
 
 
 \section{How will you solve the problem?}
 \subsection{What preprocessing steps will be required?}
-To prepare the data we received in the dataset to be useful for our different algorithms a couple of preprocessing
+To prepare the data we received from data set to be useful for our different algorithms a couple of preprocessing
 steps will be required. This includes the following:
 
-\textbf{Under-/oversampling -- data balancing} In a first glance at the data we have noticed that the class distribution is
-unbalanced (there are more normal wines than great or bad ones). For that reason we have to decide what to do about it -- how many classes we want to predict (e.g. binary classification or three classes: bad, normal and good), and how we want to distribute the samples among the classes so that it is balanced (e.g. via under- or oversampling).
+\textbf{Under-/oversampling -- data balancing} In a first glance at the data we noticed that the class distribution is
+unbalanced. There are more normal wines than great or bad ones. For that reason we have to decide what to do about it -- how many classes we want to predict (e.g., binary classification or three classes: bad, normal and good), and how we want to distribute the samples among the classes so that it is balanced (e.g., via under- or oversampling).
 
-\textbf{Data analysis and inspection} The next step would be to have a look at the data whether there are duplicates, null values or outliers in the data. Additionally, we can analyse whether there is any correlation between different features in the dataset. Furthermore, we could have a look into if we want to indroduce additional features to improve the classifier.
+\textbf{Data analysis and inspection} In the next step we must explore whether the data set includes duplicates, null values or outliers. Additionally, we can analyze whether there is any correlation between different features in the data set. Furthermore, it needs to be evaluated if the introduction of additional features improves the classifier.
 
-\textbf{Feature standardization of numerical values (normilaztion)} In order to have good results when building the classifiers we have to bring each numerical features into the same scale so one feature doesn't have a bigger impact on the outcome than others. For that reason we have do standardize or normalize the numerical features.
+\textbf{Feature standardization of numerical values (normilaztion)} In order to have good results when building the classifiers we have to bring each numerical features into the same scale so one feature does not have a bigger impact on the outcome than others. For that reason we have do standardize or normalize the numerical features.
 
 \subsection{Which algorithms do you plan to use?}
 We plan on using six to seven different classifiers to solve the problem. Since we 
 are trying to solve a classification task, the algorithms we plan on using are classification
 algorithms.
 
-Firstly, we are planning on using \textbf{k-nearest neighbors (k-NN)} as a baseline\unsure{Passt das mit der Baseline?}
+Firstly, we intend to use \textbf{k-nearest neighbors (k-NN)} as a baseline\unsure{Passt das mit der Baseline?}
 algorithm for our classification problem as k-NN is quite a simple algorithm.
-
 Additionally, we want to use \textbf{decision trees} to try build a model to classify the
 data. As an extension of decision trees we are also interested in using a \textbf{random forest}
 to derive a classifier.
-
 Furthermore, other classification algorithms that we want to use include a \textbf{Support Vector Machine (SVM)}
 or \textbf{logistic regression} -- although logistic regression could only be used if we decide on
-a binary classification problem (i.e. deciding between wines of good and bad quality).
-
+a binary classification problem (i.e., deciding between wines of good and bad quality).
 Moreover, we want to build a \textbf{neural network} that can predict if a given wine is of good or bad quality.
 
 Finally, we are interested in using \textbf{outlier detection / anomaly detection algorithms} to detect the few 
-excellent or poor wines that are given in the dataset.
-
-Generally we want to use \textbf{feature selection} test for each algorithm if there are any features which are not relevent 
-for classifying between good and bad wines to exclude them from the model. In addition to that we want to use 
+excellent or poor wines that are given in the data set.
+Generally, we intend to use \textbf{feature selection} test for each algorithm if there are any features which are not relevent 
+for classifying between good and bad wines to exclude them from the model. In addition to that we plan to include
 \textbf{hyperparameter tuning} for the different algorithms to optimize the models.
 
 \section{How will you measure success?}
