@@ -18,7 +18,11 @@
 % this packaes are useful for nice algorithms
 \usepackage{algorithm}
 \usepackage{algorithmic}
+
+%Packages Max Darmstadt
 \usepackage[paper=a4paper,left=40mm,right=40mm,top=50mm,bottom=50mm]{geometry}
+\usepackage[british]{babel} 	        % german language
+%\babelhyphenation[british]{re-gu-la-tions} %change hyphenation
 
 %Packages Max Darmstadt
 \usepackage{lipsum}
@@ -137,22 +141,21 @@ With the help of our data set and various data mining methods we want to objecti
 First of all, the prediction of wine quality based on its components is highly-valuable for wineries and large wine dealers. By following our approach, wineries and dealers can objectively determine the quality of their products which might lead to a higher market success. Moreover, our case study facilitates the valuing of wine without actually drinking it. In general, you would use experienced wine sommeliers to determine the quality of wine, but those are rare, require long training and increase the costs for product development. It is also worth mentioning that due to food regulations, wine ingredients are measured anyways. By predicting the wine quality with data mining algorithms, it’s possible to shorten the taste-testing procedure of experienced sommeliers and to save important financial resources. Our solution enables possible customers to recommend their wine to consumers and solves the weak spot that the whole wine industry heavily relies on the subjective taste of a few wine sommeliers.
 
 \section{What data will you use?}
-To solve the problem outlined above a publicly available data set on wine quality from \textit{data.world} [\url{https://data.world/uci/wine-quality}] will be used. The data set is related to red and white variants of the Portuguese wine “Vinho Verde”, a unique wine product from the northwest region of Portugal. The data was originally collected by an inter-professional organization called CVRVV between 2004 and 2007 for marketing and quality assurance purposes. Since the data is already gathered there are no additional steps necessary. 
+To solve the problem outlined above, a publicly available data set on wine quality from \textit{data.world} [\url{https://data.world/uci/wine-quality}] will be used. The data set is related to red and white variants of the Portuguese wine “Vinho Verde”, a unique wine product from the northwest region of Portugal. The data was originally collected by an inter-professional organization called CVRVV between 2004 and 2007 for marketing and quality assurance purposes. Since the data is already gathered, there are no additional steps necessary. 
 
 Taking a closer look at the data set we can identify 13 features, twelve input variables and one output variable respectively. The input variables mainly represent the test results of physiochemical properties of each specific wine, e.g., pH-value, alcohol concentration, sulfates etc. These properties are measured in their respective measurement unit. Each wine is also classified by its type (red or white). The quality of the wine is represented by a score metric ranging from 0 to 10, with 0 meaning very bad and 10 referring to excellent. Each wine sample was evaluated with a sensory test (blind test) by at least three assessors and then graded. The final grade was calculated with the median of these tests. According to the data set description the classes are ordered but unbalanced.
 
 
 \section{How will you solve the problem?}
 \subsection{What preprocessing steps will be required?}
-To prepare the data we received from data set to be useful for our different algorithms a couple of preprocessing
-steps will be required. This includes the following:
+A couple of preprocessing steps are required to prepare the data for the modelling. This includes the following:
 
-\textbf{Under-/oversampling -- data balancing} In a first glance at the data we noticed that the class distribution is
+\textbf{Under-/oversampling -- data balancing}: In a first glance at the data we noticed that the class distribution is
 unbalanced. There are more normal wines than great or bad ones. For that reason we have to decide what to do about it -- how many classes we want to predict (e.g., binary classification or three classes: bad, normal and good), and how we want to distribute the samples among the classes so that it is balanced (e.g., via under- or oversampling).
 
-\textbf{Data analysis and inspection} In the next step we must explore whether the data set includes duplicates, null values or outliers. Additionally, we can analyze whether there is any correlation between different features in the data set. Furthermore, it needs to be evaluated if the introduction of additional features improves the classifier.
+\textbf{Data analysis and inspection}: In the next step we must explore whether the data set includes duplicates, null values or outliers. Additionally, we can analyze whether there is any correlation between different features in the data set. Furthermore, it needs to be evaluated if the introduction of additional features improves the classifier.
 
-\textbf{Feature standardization of numerical values (normilaztion)} In order to have good results when building the classifiers we have to bring each numerical features into the same scale so one feature does not have a bigger impact on the outcome than others. For that reason we have do standardize or normalize the numerical features.
+\textbf{Feature standardization of numerical values (normalization)}: In order to have good results when building the classifiers, we have to bring each numerical features into the same scale so one feature does not have a bigger impact on the outcome than others. For that reason we have do standardize or normalize the numerical features.
 
 \subsection{Which algorithms do you plan to use?}
 We plan on using six to seven different classifiers to solve the problem. Since we 
@@ -169,7 +172,7 @@ or \textbf{logistic regression} -- although logistic regression could only be us
 a binary classification problem (i.e., deciding between wines of good and bad quality).
 Moreover, we want to build a \textbf{neural network} that can predict if a given wine is of good or bad quality.
 
-Finally, we are interested in using \textbf{outlier detection / anomaly detection algorithms} to detect the few 
+Finally, we are interested in using \textbf{outlier detection or anomaly detection algorithms} to detect the few 
 excellent or poor wines that are given in the data set.
 Generally, we intend to use \textbf{feature selection} test for each algorithm if there are any features which are not relevent 
 for classifying between good and bad wines to exclude them from the model. In addition to that we plan to include
@@ -181,7 +184,7 @@ First of all, it is intended to calculate the \textbf{recall} of the model which
 
 
 \section{What do you expect your results to look like?}
-We generally expect that there is a correlation between the make up of different wines and their taste (quality). Without analyzig the particular data set we found different sources that link for example, the ph-value of wine to whether it is sour or mild. Furthermore, attributes like alcohol percentage or sugar effect the sweetness of wine. Even though taste and quality might be subjective, for example sweeter wine might be generally more liked by a broader audience than bitter wine. That's why we expect to being able to predict the quality of different wines. Nonetheless, the precision of our model could be rather poor, just because of the fact that quality and taste are subjective. On the other hand the quality of wine must be influenced by its ingredients, because of that our results might be more precise than we initially expect.
+We generally expect that there is a correlation between the make up of different wines and their taste (quality). Without analyzig the particular data set we found different sources that link for example, the pH-value of wine to whether it is sour or mild. Furthermore, attributes like alcohol percentage or sugar affect the sweetness of wine. Even though taste and quality might be subjective, for example sweeter wine might be generally more liked by a broader audience than bitter wine. That is why we expect to be able to predict the quality of different wines. Nonetheless, the precision of our model could be rather poor, just because of the fact that quality and taste are subjective. On the other hand the quality of wine must be influenced by its ingredients, because of that our results might be more precise than we initially expect.
 
 %%% Un-Comment to use the bibliography
 %\bibliographystyle{plain}
