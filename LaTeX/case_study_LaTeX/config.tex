@@ -1,0 +1,59 @@
+%%%%%%%%%%%%%%%%%%%% General Settings and configurations %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[11pt,titlepage,oneside,openany]{book}
+\usepackage{times}
+
+%%%%%%%%%%%%%%%%%%%% Mandatory Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage[paper=a4paper,left=44.45mm,right=44.45mm,top=44.45mm,bottom=44.45mm]{geometry} %Standard Margins for books are 1.75inches / 44.45mm
+
+\usepackage{natbib} %Gives more options for bibliography (none are currently used)
+\usepackage[hidelinks=true]{hyperref} % Link references without red lines
+\counterwithout{footnote}{chapter} %Count footnotes over chapters
+
+\usepackage[american]{babel} 	        % english language
+\usepackage[english=american]{csquotes} 	% correct quoting using \enquote{}
+
+\usepackage{array} %Tables and special column types
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}} % left fixed width
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}} % center fixed width
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}} % flush right fixed width
+
+\usepackage{graphicx} %to include pictures and stuff
+
+\usepackage{setspace} %edit spacing
+
+\usepackage{amsmath} %Math stuff
+\usepackage{amssymb} %Math stuff
+
+%%%%%%%%%%%%%%%%%%%% Additional Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{lipsum} %Psuedotext
+
+\usepackage{algpseudocode} %Pseudocode
+
+\usepackage{listings} %Listings and special display options in line below
+\lstset{breaklines,numbers=left,xleftmargin=2em,frame=single,framexleftmargin=2em,captionpos=b}
+
+%%%%%%%%%%%%%%%%%%%% Settings up titlepage %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\setTitlepage}{
+	\input{template/titlepage}
+	\pagenumbering{roman}
+	\normalfont	
+}
+%%%%%%%%%%%%%%%%%%%% Settings up listings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\settingLists}{
+	\tableofcontents
+	\listoffigures
+	\listoftables
+    \lstlistoflistings
+}
+%%%%%%%%%%%%%%%%%%%% Settings up Text %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\initializeText}{
+	\clearpage
+	\pagenumbering{arabic}
+	%\onehalfspacing
+}
+%%%%%%%%%%%%%%%%%%%% Settings up Bibliography %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\setBibliography}{
+    \bibliographystyle{plain}
+    \bibliography{bibliography.bib}
+}
