@@ -6,3 +6,26 @@
 % - (Vorgehensweise) & Results (be cautios to not repeat yourself from the 40_data_mining part)
 % //Results = include Table with scores 
 % // Hyperparameter tuning : Scoring = F1-Macro
+
+
+\begin{table}[htbp]
+    \begin{tabular}{
+    >{\columncolor[HTML]{EFEFEF}}l |
+    >{\columncolor[HTML]{FFFFFF}}l 
+    >{\columncolor[HTML]{EFEFEF}}l |
+    >{\columncolor[HTML]{FFFFFF}}l 
+    >{\columncolor[HTML]{EFEFEF}}l |
+    >{\columncolor[HTML]{FFFFFF}}l 
+    >{\columncolor[HTML]{EFEFEF}}l |}
+    \cline{2-7}
+    \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}}                            & \multicolumn{2}{c|}{\cellcolor[HTML]{C0C0C0}Precision}                                                 & \multicolumn{2}{c|}{\cellcolor[HTML]{C0C0C0}Recall}                                                    & \multicolumn{2}{c|}{\cellcolor[HTML]{C0C0C0}F1-Makro}                                                  \\ \hline
+    \multicolumn{1}{|c|}{\cellcolor[HTML]{C0C0C0}Adaption}                   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}Train} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}Test} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}Train} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}Test} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}Train} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}Test} \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}none}                       & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}}      &                                                   & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}}      &                                                   & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}}      &                                                   \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}+ 1. Hyperparameter Tuning} & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}}      &                                                   & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}}      &                                                   & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}}      &                                                   \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}+ Balancing}                & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}}      &                                                   & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}}      &                                                   & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}}      &                                                   \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}+ Feature Selection}        & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}}      &                                                   & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}}      &                                                   & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}}      &                                                   \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}+ 2. Hyperparameter Tuning} & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}}      &                                                   & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}}      &                                                   & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}}      &                                                   \\ \hline
+    \end{tabular}
+    \caption{KNN - Predictions}
+    \label{tab:knn_pred}
+    \end{table}
