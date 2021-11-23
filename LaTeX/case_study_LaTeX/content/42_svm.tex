@@ -1,1 +1,25 @@
 \section{Support Vector Machine (SVM)}
+
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{
+    >{\columncolor[HTML]{EFEFEF}}l |
+    >{\columncolor[HTML]{FFFFFF}}l 
+    >{\columncolor[HTML]{EFEFEF}}l |
+    >{\columncolor[HTML]{FFFFFF}}l 
+    >{\columncolor[HTML]{EFEFEF}}l |
+    >{\columncolor[HTML]{FFFFFF}}l 
+    >{\columncolor[HTML]{EFEFEF}}l |}
+    \cline{2-7}
+    \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}}                     & \multicolumn{2}{c|}{\cellcolor[HTML]{C0C0C0}Precision}                                                 & \multicolumn{2}{c|}{\cellcolor[HTML]{C0C0C0}Recall}                                                    & \multicolumn{2}{c|}{\cellcolor[HTML]{C0C0C0}F1-Makro}                                                  \\ \hline
+    \multicolumn{1}{|c|}{\cellcolor[HTML]{C0C0C0}Adaption}            & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}Train} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}Test} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}Train} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}Test} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}Train} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}Test} \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}none}                & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.492} & 0.503                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.385} & 0.405                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.384} & 0412                                              \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}+ 1. Hp Tuning}      & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.871} & 0.642                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.648} & 0.541                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.720} & 0575                                              \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}+ Balancing}         & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.891} & 0.538                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.888} & 0.677                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.885} & 0565                                              \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}+ Feature Selection} & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.871} & 0.537                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.868} & 0.703                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.864} & 0561                                              \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}+ 2. Hp Tuning}      & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.938} & 0.547                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.936} & 0.657                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.935} & 0576                                              \\ \hline
+\end{tabular}
+\caption{SVM - Predictions}
+\label{tab:svm_pred}
+\end{table}
