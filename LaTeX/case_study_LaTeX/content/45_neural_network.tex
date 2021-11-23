@@ -1,1 +1,60 @@
-\section{Neural Networks}
+\section{Neural Networks}\label{sec:neural_networks}
+
+% - One to two sentences about how the model works
+% - Why it was chosen by us (KNN Baseline)
+% - Besonderheiten / Abweischungen von standard vorgehen.
+% - (Vorgehensweise) & Results (be cautios to not repeat yourself from the 40_data_mining part)
+% //Results = include Table with scores 
+% // Hyperparameter tuning : Scoring = F1-Macro
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{
+    >{\columncolor[HTML]{EFEFEF}}l |
+    >{\columncolor[HTML]{FFFFFF}}l 
+    >{\columncolor[HTML]{EFEFEF}}l |
+    >{\columncolor[HTML]{FFFFFF}}l 
+    >{\columncolor[HTML]{EFEFEF}}l |
+    >{\columncolor[HTML]{FFFFFF}}l }
+    \cline{1-6}
+    \multicolumn{1}{|c|}{\cellcolor[HTML]{C0C0C0}Arch.}  & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Preproc.}             & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Batch size}                            & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Layers}          & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Neurons}             & \multicolumn{1}{c|}{\cellcolor[HTML]{C0C0C0}Max. epochs}                                    \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}1}      & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}standard}     & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}64}                                            & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}3}               & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}100}                 & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}30}                              \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}2}      & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}+balancing}      & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}64}                                         & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}3}               & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}100}                 & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}30}                        \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}3}      & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}+balancing}       & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}64}                                        & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}4}               & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}300}                 & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}30}                              \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}4}      & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}+balancing}       & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}64}                                        & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}5}               & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}400}                 & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}30}                              \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}5}      & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}+balancing}       & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}16}                                        & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}7}               & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}1,000}               & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}40}                             \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}6}      & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}+balancing}       & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}32}                                        & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}7}               & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}1.024}               & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}40}                             \\ \hline
+\end{tabular}
+\caption{Neural network -- Architectures}
+\label{tab:nn_arch}
+\end{table}
+
+\begin{table}[htbp]
+    \centering
+    \begin{tabular}{
+    >{\columncolor[HTML]{EFEFEF}}l |
+    >{\columncolor[HTML]{FFFFFF}}l 
+    >{\columncolor[HTML]{EFEFEF}}l |}
+    \cline{2-3}
+    \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}}                          & \multicolumn{2}{c|}{\cellcolor[HTML]{C0C0C0}F1-Makro}                                                  \\ \hline
+    \multicolumn{1}{|c|}{\cellcolor[HTML]{C0C0C0}Arch.}                 & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}Val} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}Test} \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}1}                     & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.383} & 0.414                                             \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}2}           & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.675} & 0.465                                             \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}3}              & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.728} & 0.519                                             \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}4}      & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.768} & 0.499                                             \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}5}           & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.809} & 0.570                                             \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}6}           & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.814} & 0.532                                             \\ \hline
+\end{tabular}
+\caption{Neural network -- Predictions}
+\label{tab:nn_pred}
+\end{table}
+
+Neural networks (NNs), also known as artificial neural networks (ANNs), are one of the prominent applications of machine learning (ML). It is supposed to emulate the learning process of the human brain by connecting artificial neurons and giving these connections a certain weight. Adjusting these weights is the \enquote{learning part} of the algorithm. \cite[][p. 326]{Aggarwal2015}, \cite[][p. 247]{TanPang-Ning2006}
+
+After the preprocessing steps that were explained in chapter \ref{chap:preprocessing} the train dataset is split again to create a validation dataset which is used during the \textit{training} or \textit{fitting} phase of the neural network. It is used to -- as the name suggests -- validate the interim results of the network and adjust the hyperparameters. \cite[][p. 184]{TanPang-Ning2006}
+
+Having split the data again, it must be converted into tensors in order to be able to be used in the neural network. This has to be done for all of datasets i.e., training, validation and test. These tensor datasets are then used to create so-called data loaders which turns the data into batches which are then passed through the neural network. Here a couple of different batch sizes (64, 32 and 16) were tried out in order to improve the network.
+
+Now everything is set to create the architecture of the neural network itself. For that, pytorch lightning was used. Different network architectures with an increasing number of layers and artificial neurons was tried out in order to improve the performance of the model. Six different model architectures were examined further - starting from three layers and 100 artificial neurons and ending up in seven layers with 1,024 artificial neurons. As layers of the neural network the Linear of fully-connected layer of PyTorch was used \cite{PyTorch2019, PyTorch2021}. Furthermore, different activation functions (SiLU, ELU and GELU) were applied to the model but the standard model architecture with rectified linear units (ReLUs) couldn't be improved with other activation functions.
+
+An overwiew of the different network architectures that were tested and their respective performances is given in tables \ref{tab:nn_arch} and \ref{tab:nn_pred}. The \enquote{neuron} column refers to the number of neurons in the first fully-connected layer -- the number of neurons decreases with each layer. In the predictions table \ref{tab:nn_pred} the validation performance refers to the F1 validation score in the last epoch.
