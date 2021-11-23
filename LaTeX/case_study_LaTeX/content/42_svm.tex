@@ -1,5 +1,22 @@
 \section{Support Vector Machine (SVM)}
 
+% - One to two sentences about how the model works
+% - Why it was chosen by us (KNN Baseline)
+% - Besonderheiten / Abweichungen von standard vorgehen.
+% - (Vorgehensweise) & Results (be cautios to not repeat yourself from the 40_data_mining part)
+% //Results = include Table with scores 
+% // Hyperparameter tuning : Scoring = F1-Macro
+
+Support vector machines (SVM) are computer algorithms which belong to the supervised learning methods. They learn by example to assign labels to objects and can therefore be especially useful for classification problems. To achieve this purpose, they comprise four basic concepts: the separating hyperplane, the maximum-margin hyperplane, the soft margin, and the kernel fuction. In short, SVMs draw an optimal hyperplane inbetween all of the classes that are distinguished and aim to maximize the distance between the data points and the hyperplane (maximum margin).\cite{Noble2006}
+
+SVMs were chosen for this project because they are versatile and memory-efficient. Furthermore, they are particulary efficient for high-dimensonal spaces and classification problems in machine learning.\cite{ScikitLearn2021}
+
+For SVMs, the general procedure mentioned in chapter \ref{sec:data_mining} was followed. After the preprocessing of the data, the initial model was created, trained and evaluated by using a SVM. The performance of the initial model was fairly low with the $F_1-Score$ barely reaching 40 \% for both train and test data. As a next step, the first hyperparameter tuning of the attributes 'C', 'gamma', and 'kernel' resulted in an improved model with an $F_1-Score$ of 72 \% for the train data and 57.5 \% for the test data. However, it became clear that this state of the model included a high bias towards class one (wine of medium quality) due to the unbalanced train and test dataset. 
+
+The following model included a balanced dataset by using SMOTE to oversample the minority classes. The $F_1-Score$ decreased by roughly 1 \%, but the model was kept to solve the bias issue mentioned above. Although computing the feature importance was not possible due to the rbf kernel, other feature selecting techniques proved as non-viable as the $F_1-Score$ further decreased. As a result, this model was excluded from the second hyperparameter tuning. 
+
+Lastly, the second hyperparameter tuning resulted in the same optimal parameters and $F_1-Score$ as before in the oversampling step. Additional experimentation with the hyperparameters led to the final model with an $F_1-Score$ of 93.5 \% for the train data and 57.6 \% for the test data. In theory, it is possible to further increase the $F_1-Score$ for the test data to values above 60 \% by increasing the hyperparameters 'C' and 'gamma'. However, this would lead to an even higher overfit-tendency of the model. Therefore, this step was avoided. All results regarding the model evaluation can be found in table \ref{tab:svm_pred}. Further information about the approach is given in the associated jupyter notebook. 
+
 
 \begin{table}[htbp]
     \centering
@@ -14,12 +31,13 @@
     \cline{2-7}
     \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}}                     & \multicolumn{2}{c|}{\cellcolor[HTML]{C0C0C0}Precision}                                                 & \multicolumn{2}{c|}{\cellcolor[HTML]{C0C0C0}Recall}                                                    & \multicolumn{2}{c|}{\cellcolor[HTML]{C0C0C0}F1-Makro}                                                  \\ \hline
     \multicolumn{1}{|c|}{\cellcolor[HTML]{C0C0C0}Adaption}            & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}Train} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}Test} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}Train} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}Test} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}Train} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}Test} \\ \hline
-    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}none}                & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.492} & 0.503                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.385} & 0.405                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.384} & 0412                                              \\ \hline
-    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}+ 1. Hp Tuning}      & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.871} & 0.642                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.648} & 0.541                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.720} & 0575                                              \\ \hline
-    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}+ Balancing}         & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.891} & 0.538                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.888} & 0.677                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.885} & 0565                                              \\ \hline
-    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}+ Feature Selection} & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.871} & 0.537                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.868} & 0.703                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.864} & 0561                                              \\ \hline
-    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}+ 2. Hp Tuning}      & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.938} & 0.547                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.936} & 0.657                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.935} & 0576                                              \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}none}                & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.492} & 0.503                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.385} & 0.405                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.384} & 0.412                                              \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}+ 1. Hp Tuning}      & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.871} & 0.642                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.648} & 0.541                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.720} & 0.575                                              \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}+ Balancing}         & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.891} & 0.538                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.888} & 0.677                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.885} & 0.565                                              \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}+ Feature Selection} & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.871} & 0.537                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.868} & 0.703                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.864} & 0.561                                              \\ \hline
+    \multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}+ 2. Hp Tuning}      & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.938} & 0.547                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.936} & 0.657                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.935} & 0.576                                              \\ \hline
 \end{tabular}
 \caption{SVM - Predictions}
 \label{tab:svm_pred}
 \end{table}
+
