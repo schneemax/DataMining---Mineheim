@@ -1,1 +1,23 @@
 \section{Decision Tree}\label{sec:decision_tree}
+\begin{table}[htbp]
+	\centering
+	\begin{tabular}{
+			>{\columncolor[HTML]{EFEFEF}}l |
+			>{\columncolor[HTML]{FFFFFF}}l 
+			>{\columncolor[HTML]{EFEFEF}}l |
+			>{\columncolor[HTML]{FFFFFF}}l 
+			>{\columncolor[HTML]{EFEFEF}}l |
+			>{\columncolor[HTML]{FFFFFF}}l 
+			>{\columncolor[HTML]{EFEFEF}}l |}
+		\cline{2-7}
+		\multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}}                            & \multicolumn{2}{c|}{\cellcolor[HTML]{C0C0C0}Precision}                                                 & \multicolumn{2}{c|}{\cellcolor[HTML]{C0C0C0}Recall}                                                    & \multicolumn{2}{c|}{\cellcolor[HTML]{C0C0C0}F1-Makro}                                                  \\ \hline
+		\multicolumn{1}{|c|}{\cellcolor[HTML]{C0C0C0}Adaption}                   & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}Train} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}Test} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}Train} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}Test} & \multicolumn{1}{c|}{\cellcolor[HTML]{FFFFFF}Train} & \multicolumn{1}{c|}{\cellcolor[HTML]{EFEFEF}Test} \\ \hline
+		\multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}none}                       & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}1.000} & 0.569                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}1.000} & 0.582                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}1.000} & 0.575                                             \\ \hline
+		\multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}+ 1. Hp Tuning} & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.822} & 0.484                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.714} & 0.46                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.757} & 0.468                                             \\ \hline
+		\multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}+ Balancing}                & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.843} & 0.486                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.843} & 0.610                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.841} & 0.500                                             \\ \hline
+		\multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}+ Feature Selection}        & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.847} & 0.492                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.847} & 0.611                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.845} & 0.501                                             \\ \hline
+		\multicolumn{1}{|l|}{\cellcolor[HTML]{EFEFEF}+ 2. Hp Tuning} & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.869} & 0.485                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.866} & 0.600                                             & \multicolumn{1}{l|}{\cellcolor[HTML]{FFFFFF}0.862} & 0.485                                             \\ \hline
+	\end{tabular}
+	\caption{Decision Tree - Predictions}
+	\label{tab:rf_pred}
+\end{table}
