@@ -31,7 +31,7 @@
 \label{tab:knn_pred}
 \end{table}
 
-K-Nearest Neighbors (K-NN) is a rather simple algorithm, which is based on the distances between different data points to classify data. The foundamental idea of this algorithm is that the distance between data points that belong to the same class is less than to data points that do belong in a different class.\cite{Yildirim2020}
+K-Nearest Neighbors (K-NN) is a rather simple algorithm, which is based on the distances between different data points to classify data. The foundamental idea of this algorithm is that the distance between data points that belong to the same class is less than to data points that do belong in a different class.\citep{Yildirim2020}
 
 The initial training of the model, using the default values of the K-NN algorithm, resulted in rather unprecise measurements. The Precision and Recall values in table \ref{tab:knn_pred} show that only around half of the data points are classified correctly. Furthermore, the Precision values are higher than the Recall values, which might indicate more false negative class predictions. Nonetheless, these results are a usable baseline. Afterwards a first hyperparameter tuning was executed, which resulted in almost the same exact default values. Meaning that the default values are already the most optimized combination of execution steps. Parameters that are tested through the hyperparameter tuning are mainly various settings for different calculation models for estimating the distance between data points. On top of that \textit{n\_neighbors} sets the number of relevant neighbor data points that are included into the calculation.
 

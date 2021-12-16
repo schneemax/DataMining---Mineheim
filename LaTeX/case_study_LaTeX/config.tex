@@ -6,7 +6,7 @@
 
 \usepackage[paper=a4paper,left=44.45mm,right=44.45mm,top=44.45mm,bottom=44.45mm]{geometry} %Standard Margins for books are 1.75inches / 44.45mm
 
-\usepackage{natbib} %Gives more options for bibliography (none are currently used)
+\usepackage[round]{natbib} %Gives more options for bibliography (none are currently used)
 \usepackage[hyphens]{url} %Line breaks in bibliography. Do not use after hyperref package
 \usepackage[hidelinks=true]{hyperref} % Link references without red lines
 \counterwithout{footnote}{chapter} %Count footnotes over chapters
@@ -45,9 +45,9 @@
 %%%%%%%%%%%%%%%%%%%% Settings up listings %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\settingLists}{
 	\tableofcontents
-	\listoffigures
-	\listoftables
-    \lstlistoflistings
+	%\listoffigures
+	%\listoftables
+    %\lstlistoflistings
 }
 %%%%%%%%%%%%%%%%%%%% Settings up Text %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\initializeText}{
@@ -57,6 +57,8 @@
 }
 %%%%%%%%%%%%%%%%%%%% Settings up Bibliography %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\setBibliography}{
-    \bibliographystyle{plain}
+	%\usepackage[round]{natbib}
+	\bibliographystyle{plainnat}
+    %\bibliographystyle{plain}
     \bibliography{bibliography.bib}
 }
